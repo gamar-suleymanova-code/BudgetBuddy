@@ -1,5 +1,4 @@
-@import './variables';
-
+@use './variables' as var;
 /* fonts */
 #root {
     max-width: 100%;
@@ -20,60 +19,60 @@ input {
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    font-weight: $semiBold;
+    font-weight: var.$semiBold;
     margin-bottom: 0;
 }
-h4, .h4 { font-size: $px37_9; }
-h5, .h5 { font-size: $px28_43; }
-h6, .h6 { font-size: $px21_33; }
+h4, .h4 { font-size: var.$px37_9; }
+h5, .h5 { font-size: var.$px28_43; }
+h6, .h6 { font-size: var.$px21_33; }
 
 .text_md { font-size: 1rem; }
-.text_sm { font-size: $px12; }
+.text_sm { font-size: var.$px12; }
 
-.fw_semiBold { font-weight: $semiBold; }
+.fw_semiBold { font-weight: var.$semiBold; }
 /* flex */
 .flex_center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.gap_12px { gap: $px12; }
-.gap_18px { gap: $px18; }
-.gap_24px { gap: $px24; }
+.gap_12px { gap: var.$px12; }
+.gap_18px { gap: var.$px18; }
+.gap_24px { gap: var.$px24; }
 /* rounded */
 .rounded_12px { border-radius: 12px; }
 .rounded_18px { border-radius: 18px; }
 /* shadows */
-.shadow_Tmain { text-shadow: $mainTShadow }
-.shadow_drop { box-shadow: $dropShadow; }
-.shadow_main { box-shadow: $mainShadow; }
+.shadow_Tmain { text-shadow: var.$mainTShadow }
+.shadow_drop { box-shadow: var.$dropShadow; }
+.shadow_main { box-shadow: var.$mainShadow; }
 .shadow_m3Light { box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15), 0px 2px 6px rgba(0, 0, 0, 0.1); }
 /* padding & margin */
 .form_p {
-    padding-inline: $px24;
-    padding-top: $px18;
-    padding-bottom: $px32;
+    padding-inline: var.$px24;
+    padding-top: var.$px18;
+    padding-bottom: var.$px32;
 }
-.px_18px { padding-inline: $px18; }
-.px_36px { padding-inline: $px36; }
-.px_24px { padding-inline: $px24; }
-.py_12px { padding-block: $px12; }
-.p_12px { padding: $px12; }
-.py_24px { padding-block: $px24; }
-.pt_12px { padding-top: $px12; }
-.pt_18px { padding-top: $px18; }
-.pt_36px { padding-top: $px36; }
-.pt_48px { padding-top: $px48; }
-.pb_12px { padding-bottom: $px12; }
-.pb_24px { padding-bottom: $px24; }
-.my_12px { margin-block: $px12; }
-.mb_12px { margin-bottom: $px12; }
-.mt_36px { margin-top: $px36; }
-.mb_18px { margin-bottom: $px18; }
-.pb_18px { padding-bottom: $px18; }
+.px_18px { padding-inline: var.$px18; }
+.px_36px { padding-inline: var.$px36; }
+.px_24px { padding-inline: var.$px24; }
+.py_12px { padding-block: var.$px12; }
+.p_12px { padding: var.$px12; }
+.py_24px { padding-block: var.$px24; }
+.pt_12px { padding-top: var.$px12; }
+.pt_18px { padding-top: var.$px18; }
+.pt_36px { padding-top: var.$px36; }
+.pt_48px { padding-top: var.$px48; }
+.pb_12px { padding-bottom: var.$px12; }
+.pb_24px { padding-bottom: var.$px24; }
+.my_12px { margin-block: var.$px12; }
+.mb_12px { margin-bottom: var.$px12; }
+.mt_36px { margin-top: var.$px36; }
+.mb_18px { margin-bottom: var.$px18; }
+.pb_18px { padding-bottom: var.$px18; }
 /* others */
 .minh-inherit { min-height: inherit; }
-.transition_default { transition: $transition; }
+.transition_default { transition: var.$transition; }
 .overflow_unset { overflow: unset; }
 .object_top { object-position: top; }
 .hidden { visibility: hidden; }
@@ -82,8 +81,8 @@ h6, .h6 { font-size: $px21_33; }
 .text_balance { text-wrap: balance; }
 /* elements */
 .default_btn {
-    height: $px48;
-    padding-inline: $px12;
+    height: var.$px48;
+    padding-inline: var.$px12;
     border: none;
     background-color: transparent;
 }
@@ -100,10 +99,10 @@ h6, .h6 { font-size: $px21_33; }
 .btn_link:focus,
 .btn_link:focus-visible { text-decoration: none; }
 .input_style {
-    background: $mainGradient;
-    box-shadow: $mainShadow;
+    background: var.$mainGradient;
+    box-shadow: var.$mainShadow;
     border: none;
-    color: $darkBlue;
+    color: var.$darkBlue;
 }
 .input_style,
 .input_style:focus,
@@ -112,10 +111,10 @@ h6, .h6 { font-size: $px21_33; }
     outline: none;
 }
 .formControl[data-invalid] .chakra-form__error-message {
-    color: $danger;
+    color: var.$danger;
 }
 .formControl[data-invalid] .input_style {
-    box-shadow: $dangerShadow;
+    box-shadow: var.$dangerShadow;
 }
 .formControl {
     position: relative;
@@ -137,7 +136,7 @@ h6, .h6 { font-size: $px21_33; }
 }
 .input_style:focus,
 .input_style:focus-visible {
-    background: $white;
+    background: var.$white;
 }
 .input_style:focus,
 .input_style:focus-visible,
@@ -146,7 +145,7 @@ h6, .h6 { font-size: $px21_33; }
 .shadow_on_state:hover,
 .shadow_on_state:focus-visible,
 .shadow_on_state:focus {
-    box-shadow: $mainShadowOnHover;
+    box-shadow: var.$mainShadowOnHover;
 }
 
 .input_style,
@@ -176,7 +175,7 @@ h6, .h6 { font-size: $px21_33; }
     position: relative;
     width: 100%;
     height: 100%;
-    transition: $transition;
+    transition: var.$transition;
     transform-style: preserve-3d;
 }
 .flip-card.register_active .flip-card-inner {
@@ -193,13 +192,13 @@ h6, .h6 { font-size: $px21_33; }
 }
 .flip-card-back { transform: rotateY(180deg); }
 /* colors */
-.text_darkBlue { color: $darkBlue; }
-.c_light { color: $light; }
-.c_main { color: $main; }
+.text_darkBlue { color: var.$darkBlue; }
+.c_light { color: var.$light; }
+.c_main { color: var.$main; }
 
-.bg_main { background: $main; }
+.bg_main { background: var.$main; }
 .bg_white {background-color: white;}
-.bg_mainGradient { background: $mainGradient; }
+.bg_mainGradient { background: var.$mainGradient; }
 
 .w_fit { width: fit-content; }
 
@@ -215,18 +214,42 @@ height: 3px;
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: $light;
+background-color: var.$light;
 }
 .step.active {
-background-color: $main;
+background-color: var.$main;
 color: var(--white);
 }
 .heading_home {
-    color: $darkBlue;
-    text-shadow: $mainTShadow
+    color: var.$darkBlue;
+    text-shadow: var.$mainTShadow
 }
 .authCard_container  {
     overflow: hidden;
     display: flex;
     align-items: center;
+}
+.auth_btn .right-arrow .arrow,
+.auth_btn .right-arrow .line {
+    transition: var.$transition;
+}
+.auth_btn .right-arrow .arrow { // when cursor leaves | not touched btn
+    transform: translateX(0px) scale(1);
+}
+.auth_btn:hover .right-arrow .arrow {
+    transform: translateX(20px) scale(1.1);
+}
+.auth_btn .right-arrow .line { // when cursor leaves | not touched btn
+    transform: translateX(0px) scale(1);
+    transform-origin: center;
+    opacity: 1;
+} 
+.auth_btn:hover .right-arrow .line {
+    transform: translateX(-20px) scale(0);
+    transform-origin: center;
+    opacity: 0;
+} 
+.inline_center {
+    left: 50%;
+    transform: translateX(-50%);
 }
