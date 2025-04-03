@@ -111,6 +111,7 @@ export default function AuthForm({ isLogin }: AuthFormProps) {
           >
             {`${isLogin ? "Login" : "Register"}`}
             {/* <FontAwesomeIcon icon={faRightToBracket} /> */}
+            {/* Icons made by Font Awesome (https://fontawesome.com) are licensed by MIT License.  */}
             <svg
               className='right-arrow'
               width="32"
@@ -118,6 +119,7 @@ export default function AuthForm({ isLogin }: AuthFormProps) {
               viewBox="0 0 140 125"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              // Icons made by Font Awesome (https://fontawesome.com) are licensed by MIT License. 
             >
               <path
                 className='line'
