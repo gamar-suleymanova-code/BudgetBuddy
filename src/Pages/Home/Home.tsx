@@ -62,7 +62,9 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="container" style={{ paddingTop: navHeight + "px" }}>
+    <div
+      className="container"
+    >
       <div className="row flex-md-row-reverse vh-100">
         {!isTablet && (
           <div className="col authCard_container">
